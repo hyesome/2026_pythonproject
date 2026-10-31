@@ -9,7 +9,7 @@ print("1. 게임 시작")
 print("2. 랭킹 확인")
 print("0. 게임종료")
 print("=====================")
-user_input = None
+user_input = "0" # None
 
 while user_input != "0":
     user_input = input("원하는 동작을 입력하세요")
@@ -23,3 +23,17 @@ while user_input != "0":
     else:
         print("잘못된 입력입니다.")
 
+while True:
+    user_input = "0" #input("원하는 동작을 입력하세요")
+    if user_input == "0":
+        print("게임을 종료합니다.")
+        break # 해당 if문을 포함하는 직속 while문을 종료
+
+
+b = 0
+
+while b < 10:
+    b += 1 # a = a + 1
+    if b==5:
+        continue
+    print(b)
