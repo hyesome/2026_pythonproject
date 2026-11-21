@@ -7,17 +7,19 @@ movies = [
 ]
 
 def retrieve_rating():
-    print("[평점 8.5 이상 영화]")
+    user_input = float(input("평점 몇 이상의 영화를 조회하시겠습니까?"))
+    print("[평점",user_input," 이상 영화]")
     for movie in movies:
-        if movie["rating"] > 8.5:
+        if movie["rating"] > user_input:
             print("- ", movie["title"])
 
 def retrieve_total_movie_views():
+    user_input = input("어느 장르의 누적 뷰를 조회하시겠습니까?")
     total_animation_views = 0
     for movie in movies:
-        if movie["genre"] == "애니메이션":
+        if movie["genre"] == user_input:
             total_animation_views = total_animation_views + movie["views"]
-    print("[애니메이션 장르의 누적조회수]")
+    print("[",user_input," 장르의 누적조회수]")
     print(total_animation_views)
 
 def retrieve_max_view_movie():
