@@ -22,7 +22,7 @@ while True:
         continue
 
     if age <= 8:
-        price = 0
+        price = 5000
     elif age <= 19:
         price = 10000
     elif age <= 64:
